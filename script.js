@@ -65,7 +65,7 @@ btnHold.addEventListener('click', function() {
         document.getElementById(`score--${activePlayer}`).textContent = totalScore[activePlayer];
 
 // 2. If total score aktive player >100, aktive player win
-    if (totalScore[activePlayer] >= 10) {
+    if (totalScore[activePlayer] >= 100) {
         isPlaying = false;
         document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
         document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
@@ -86,6 +86,6 @@ btnNew.addEventListener('click', function() {
     current1Element.textContent = 0;
     diceElement.classList.add('hidden');
     document.querySelector(`.player--${activePlayer}`).classList.remove('player--winner');
-    document.querySelector(`.player--0`).classList.add('player--active');
+    player0Element.classList.add('player--active');
     isPlaying = true;
 })
